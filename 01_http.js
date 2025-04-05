@@ -10,8 +10,10 @@ const server = http.createServer((req, res) => {
         case "/":
             res.statusCode = 200;
             res.setHeader('Content-Type', 'text/plain')
-            console.log(dateAndTime + "" + dateAndTime.getHours() + ":" + dateAndTime.getMinutes() + ":" + dateAndTime.getSeconds())
-            res.end(dateAndTime + "" + dateAndTime.getHours() + ":" + dateAndTime.getMinutes() + ":" + dateAndTime.getSeconds())
+            // console.log(dateAndTime + "" + dateAndTime.getHours() + ":" + dateAndTime.getMinutes() + ":" + dateAndTime.getSeconds())
+            console.log(dateAndTime.toISOString())
+            // res.end(dateAndTime + "" + dateAndTime.getHours() + ":" + dateAndTime.getMinutes() + ":" + dateAndTime.getSeconds())
+            res.end(dateAndTime.toISOString())
             break;
         case "/hello":
             res.statusCode = 200;
