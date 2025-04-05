@@ -8,10 +8,22 @@ const server = http.createServer((req, res) => {
 
     switch (pathname) {
         case "/":
-            console.log(dateAndTime.toDateString());
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'text/plain')
+            console.log(dateAndTime + "" + dateAndTime.getHours() + ":" + dateAndTime.getMinutes() + ":" + dateAndTime.getSeconds())
+            res.end(dateAndTime + "" + dateAndTime.getHours() + ":" + dateAndTime.getMinutes() + ":" + dateAndTime.getSeconds())
             break;
         case "/hello":
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'text/plain')
             console.log("Hello, World!")
+            res.end("Hello, World!")
+            break;
+        default:
+            res.statusCode = 404;
+            res.setHeader('Content-Type', 'text/plain')
+            console.log("url not found")
+            res.end("path not found")
     }
 })
 

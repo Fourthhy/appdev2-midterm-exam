@@ -7,4 +7,4 @@ console.log('Protocol:', parsedUrl.protocol);
 console.log('Hostname:', parsedUrl.hostname);
 console.log('Port:', parsedUrl.port);
 console.log('Pathname:', parsedUrl.pathname);
-console.log('Query Parameters:', parsedUrl.query.category + " and " + parsedUrl.query.sort);
+console.log('Query Parameters:', parsedUrl.query.category + " " + parsedUrl.query.sort);
